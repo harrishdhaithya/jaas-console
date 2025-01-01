@@ -41,9 +41,6 @@ public class AuthLoginModule implements LoginModule {
             handler.handle(callback);
             String name = ((NameCallback)callback[0]).getName();
             String password = String.valueOf(((PasswordCallback)callback[1]).getPassword());
-            System.out.println(name);
-            System.out.println(password);
-            System.out.println(validate(name, password));
             if(
                 validate(name, password)
             ){
